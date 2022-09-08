@@ -1,0 +1,31 @@
+package br.com.servlet.init;
+
+import java.util.Properties;
+import java.io.IOException;
+import org.eclipse.birt.report.engine.api.EngineConfig;
+import org.eclipse.birt.report.engine.api.IReportEngine;
+
+public class InitServlet {
+	//inicialiando objetos de configuração
+	private IReportEngine birtEngine = null;
+	private Properties configProps = new Properties();
+	private final static String configFile = "BirtConfig.properties";
+	
+	public static void InitServlet() throws IOException{
+		loadEngineProps();
+	}
+
+	private static void loadEngineProps() {
+		// TODO Auto-generated method stub
+		try{
+			ClassLoader cl =Thread.currentThread().getContextClassLoader();
+			
+			
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+}

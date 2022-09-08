@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.eclipse.birt.report.engine.api.EngineConstants"/>
+    <fullyQualifiedTypeName name="org.eclipse.birt.report.engine.api.EngineConfig"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="org.eclipse.birt.report.engine.api.IReportEngine"/>
+    <fullyQualifiedTypeName name="org.eclipse.datatools.connectivity.oda.util.logging.Level"/>
+    <fullyQualifiedTypeName name="java.util.logging.Level"/>
+    <fullyQualifiedTypeName name="javax.servlet.Servlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="org.eclipse.birt.core.framework.Platform"/>
+    <fullyQualifiedTypeName name="org.eclipse.birt.core.framework.PlatformServletContext"/>
+    <fullyQualifiedTypeName name="org.eclipse.birt.core.framework.IPlatformContext"/>
+    <fullyQualifiedTypeName name="org.eclipse.birt.core.exception.BirtException"/>
+    <fullyQualifiedTypeName name="org.eclipse.birt.report.engine.api.IReportEngineFactory"/>
+</qualifiedTypeNameHistroy>

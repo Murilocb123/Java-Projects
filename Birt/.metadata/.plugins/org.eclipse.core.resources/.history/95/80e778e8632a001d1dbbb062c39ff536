@@ -1,0 +1,8 @@
+package br.com.servlet.init;
+
+import org.eclipse.birt.report.engine.api.EngineConfig;
+
+public class InitServlet {
+	private final EngineConfig configInit = new EngineConfig();
+	
+}

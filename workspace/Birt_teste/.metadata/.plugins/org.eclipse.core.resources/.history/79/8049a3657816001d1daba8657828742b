@@ -1,0 +1,52 @@
+package com.murilo;
+
+import java.util.logging.Level;
+
+import org.eclipse.birt.core.framework.Platform;
+import org.eclipse.birt.report.engine.api.EngineConfig;
+import org.eclipse.birt.report.engine.api.EngineException;
+import org.eclipse.birt.report.engine.api.IReportEngine;
+import org.eclipse.birt.report.engine.api.IReportEngineFactory;
+import org.eclipse.core.internal.registry.RegistryProviderFactory;
+
+public class baseReport {
+	
+	
+	public static void main(String[] args) {
+		IReportEngine engine;
+         try{
+        	 final EngineConfig config = new EngineConfig( );
+        	     //delete the following line if using BIRT 3.7 (or later) POJO runtime
+        	     //As of 3.7.2, BIRT now provides an OSGi and a POJO Runtime.
+
+        	     config.setEngineHome( "C:\\birtruntime\\ReportEngine" );
+        	     config.setLogConfig("c:/temp", Level.FINE);
+
+        	     Platform.startup( config );
+        	     //If using RE API in Eclipse/RCP application this is not needed.
+        	     IReportEngineFactory factory = (IReportEngineFactory) Platform
+        	             .createFactoryObject( IReportEngineFactory.EXTENSION_REPORT_ENGINE_FACTORY );
+        	     engine = factory.createReportEngine( config );
+        	     engine.changeLogLevel( Level.WARNING );
+        	 }catch( Exception ex){
+        	     ex.printStackTrace();
+        	 }
+        	 // Run reports, etc.
+        	 ...
+
+        	 // destroy the engine.
+        	 try
+        	 {
+        	    
+				engine.destroy();
+        	     Platform.shutdown();
+        	     //Bugzilla 351052
+        	     RegistryProviderFactory.releaseDefault();
+        	 }catch ( EngineException e1 ){
+        	     // Ignore
+        	 }
+         
+
+	}
+
+}
